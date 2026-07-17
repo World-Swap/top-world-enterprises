@@ -75,7 +75,6 @@ about ten minutes.
       `https://formspree.io/f/YOUR_FORM_ID`. Create the form at formspree.io
       with `kossa@topworldenterprises.com` and paste the real ID. **The form does
       nothing until this is done.**
-- [ ] **Kossa's surname** — used in the LinkedIn copy, and should be on this site.
 - [ ] **Real pricing.** `services/index.html` has a TODO where the
       "à partir de X €/poste/mois" line goes. A number filters tyre-kickers and
       roughly doubles reply rate. It has to be defensible on call one.
