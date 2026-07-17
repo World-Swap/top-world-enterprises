@@ -19,12 +19,22 @@ services:
         name: Referrer-Policy
         value: strict-origin-when-cross-origin
     routes:
-      - type: rewrite
+      # 301, not rewrite. A rewrite serves the new page at the OLD url =
+      # duplicate content, and transfers no link equity. These legacy GoDaddy
+      # paths must genuinely move.
+      - type: redirect
         source: /accueil%2Fhome
         destination: /
-      - type: rewrite
+      - type: redirect
+        source: /accueil/home
+        destination: /
+      - type: redirect
         source: /contactez-nous%2Fcontact-us
         destination: /contact/
-      - type: rewrite
+      - type: redirect
+        source: /contactez-nous/contact-us
+        destination: /contact/
+      # /mission had real content on the old site; the homepage absorbed it.
+      - type: redirect
         source: /mission
         destination: /
