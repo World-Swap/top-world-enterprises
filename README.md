@@ -78,6 +78,10 @@ about ten minutes.
 - [ ] **Real pricing.** `services/index.html` has a TODO where the
       "à partir de X €/poste/mois" line goes. A number filters tyre-kickers and
       roughly doubles reply rate. It has to be defensible on call one.
+- [ ] **ICE + RC numbers.** Commented slot in every footer. TWE is a new company
+      selling to French buyers who are actively screening for scams — a
+      verifiable Moroccan registration number is the cheapest trust you can buy.
+      Uncomment once you have them.
 - [ ] **Logo as SVG or transparent PNG.** All six current files are JPEGs with
       baked-in white backgrounds, so the logo can only sit on white. The footer
       currently works around this with a white card. Fix at source.
