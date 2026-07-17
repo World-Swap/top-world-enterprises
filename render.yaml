@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: top-world-enterprises
+    runtime: static
+    staticPublishPath: .
+    buildCommand: ""
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+    routes:
+      - type: rewrite
+        source: /accueil%2Fhome
+        destination: /
+      - type: rewrite
+        source: /contactez-nous%2Fcontact-us
+        destination: /contact/
+      - type: rewrite
+        source: /mission
+        destination: /
