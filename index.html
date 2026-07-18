@@ -1,293 +1,827 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Centre d'appels francophone à Casablanca | Top World Enterprises</title>
-<meta name="description" content="Centre d'appels et externalisation à Casablanca : permanence téléphonique, service client, prise de rendez-vous et télévente en français. Équipe opérationnelle en 15 jours. Conforme à la loi du 11 août 2026.">
-<link rel="canonical" href="https://topworldenterprises.com/">
-<link rel="alternate" hreflang="fr" href="https://topworldenterprises.com/">
-<link rel="alternate" hreflang="en" href="https://topworldenterprises.com/en/">
-<link rel="alternate" hreflang="x-default" href="https://topworldenterprises.com/">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Story Mode Guy — Photography, Ebooks & Film</title>
+<meta name="description" content="Photography, original ebooks, and short films from Story Mode Guy — someone who treats everything like it has a plot.">
+<link rel="canonical" href="https://storymodeguy.com/">
+<link rel="icon" type="image/png" href="smg-logo.png">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:site_name" content="Top World Enterprises">
-<meta property="og:title" content="Votre équipe francophone à Casablanca">
-<meta property="og:description" content="Permanence téléphonique, service client et prise de rendez-vous en français, depuis Casablanca. Opérationnelle en 15 jours.">
-<meta property="og:url" content="https://topworldenterprises.com/">
-<meta property="og:image" content="https://topworldenterprises.com/assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@topworldentrprz">
+<meta property="og:site_name" content="Story Mode Guy">
+<meta property="og:url" content="https://storymodeguy.com/">
+<meta property="og:title" content="Story Mode Guy — Photography, Ebooks & Film">
+<meta property="og:description" content="Photography, original fantasy ebooks, and short films.">
+<meta property="og:image" content="https://storymodeguy.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Story Mode Guy — Photography, Ebooks & Film">
+<meta name="twitter:description" content="Photography, original fantasy ebooks, and short films.">
+<meta name="twitter:image" content="https://storymodeguy.com/og-image.jpg">
 
-<link rel="icon" href="/assets/img/favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<!-- ============================================================
+     FONTS
+     ppmondwest  → Fraunces  (display serif, weight 400)
+     af          → Inter     (utility sans)
+     ============================================================ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Top World Enterprises SARL AU",
-  "url": "https://topworldenterprises.com/",
-  "image": "https://topworldenterprises.com/assets/img/og-image.jpg",
-  "telephone": "+212529875900",
-  "email": "kossa@topworldenterprises.com",
-  "description": "Centre d'appels francophone et partenaire d'externalisation à Casablanca, Maroc.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Offices Latitudes, Route de l'Oasis, Bureau 304, Maârif",
-    "addressLocality": "Casablanca",
-    "addressRegion": "Casablanca-Settat",
-    "addressCountry": "MA"
-  },
-  "areaServed": [
-    { "@type": "Country", "name": "France" },
-    { "@type": "Country", "name": "Belgique" },
-    { "@type": "Country", "name": "Suisse" },
-    { "@type": "Country", "name": "Maroc" }
-  ],
-  "knowsLanguage": ["fr", "ar"],
-  "sameAs": [
-    "https://www.linkedin.com/company/topworldenterprises",
-    "https://www.facebook.com/TopWorldEnterprises/",
-    "https://www.instagram.com/topworldenterprises",
-    "https://www.x.com/topworldentrprz"
-  ]
+<style>
+:root{
+  /* ---- Colors (from style reference) ---- */
+  --parchment:#fefffc;
+  --paper:#ffffff;
+  --linen:#f9faf7;
+  --ink-black:#171717;
+  --graphite:#2c2c2c;
+  --charcoal:#444141;
+  --ash:#646464;
+  --fog:#b4b8b4;
+  --mist:#dee2de;
+  --twilight:#282834;
+  --dusk:#1f1f29;
+  --signal-blue:#41a1cf;
+  --cerulean:#0081c0;
+
+  /* ---- Type ---- */
+  --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans:'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* ---- Radii ---- */
+  --r-btn:8px;
+  --r-card:12px;
+  --r-card-lg:16px;
+  --r-surface:24px;
+  --r-pill:50px;
+
+  /* ---- Shadows (used very sparingly) ---- */
+  --sh-nav:rgba(0,0,0,0.15) 0px 2px 6px 0px;
+  --sh-card:rgba(0,0,0,0.08) 0px 1px 1px 0px, rgba(0,0,0,0.08) 0px 4px 5px 0px;
+  --sh-soft:rgba(0,0,0,0.05) 0px 1px 8px 0px;
 }
-</script>
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+
+body{
+  margin:0;
+  background:var(--parchment);
+  color:var(--charcoal);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.5;
+  letter-spacing:-0.01em;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+h1,h2,h3{
+  font-family:var(--serif);
+  font-weight:400;
+  color:var(--graphite);
+  font-feature-settings:"liga" 0;
+  margin:0;
+}
+
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+
+/* ---- Shared eyebrow / caption ---- */
+.eyebrow{
+  font-family:var(--sans);
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--ash);
+  margin:0 0 var(--space,20px) 0;
+}
+
+/* ---- Buttons ---- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  font-family:var(--sans);
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:-0.01em;
+  border-radius:var(--r-btn);
+  padding:8px 16px;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+}
+.btn .arrow{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:18px;height:18px;border-radius:50%;
+  border:1px solid currentColor;font-size:11px;line-height:1;
+}
+.btn-primary{ color:var(--signal-blue); border-color:var(--signal-blue); background:transparent; }
+.btn-primary:hover{ background:rgba(65,161,207,0.08); }
+.btn-secondary{ color:var(--twilight); border-color:var(--twilight); background:transparent; }
+.btn-secondary:hover{ background:rgba(40,40,52,0.05); }
+.btn-filled{ color:#fff; background:var(--dusk); border-color:var(--twilight); }
+.btn-filled:hover{ transform:translateY(-1px); }
+.btn-onblue{ color:#fff; border-color:rgba(255,255,255,0.7); background:transparent; }
+.btn-onblue:hover{ background:rgba(255,255,255,0.14); }
+
+a:focus-visible,.btn:focus-visible{ outline:2px solid var(--signal-blue); outline-offset:3px; border-radius:var(--r-btn); }
+
+/* ============================================================
+   NAVIGATION — frosted pill, top center
+   ============================================================ */
+.nav-wrap{ position:fixed; top:18px; left:0; right:0; z-index:50; display:flex; justify-content:center; padding:0 16px; pointer-events:none; }
+.nav{
+  pointer-events:auto;
+  display:flex; align-items:center; gap:6px;
+  background:rgba(255,255,255,0.55);
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(40,40,52,0.5);
+  border-radius:var(--r-pill);
+  padding:7px 8px 7px 16px;
+  box-shadow:var(--sh-nav);
+  max-width:100%;
+}
+.brand{ display:flex; align-items:center; gap:9px; margin-right:6px; }
+.brand .brand-logo{ width:30px; height:30px; border-radius:50%; display:block; }
+.brand .glyph{ color:var(--twilight); }
+.brand .brand-name{ font-family:var(--serif); font-size:16px; color:var(--graphite); white-space:nowrap; letter-spacing:-0.01em; }
+.nav-links{ display:flex; align-items:center; gap:2px; }
+.nav-links a{
+  font-size:15px; font-weight:500; color:var(--charcoal);
+  padding:7px 12px; border-radius:var(--r-pill); white-space:nowrap;
+  transition:background-color .16s ease, color .16s ease;
+}
+.nav-links a:hover{ background:rgba(40,40,52,0.06); color:var(--graphite); }
+.nav-cta{ margin-left:4px; }
+.nav-toggle{ display:none; }
+
+@media (max-width:860px){
+  .nav-links{ display:none; }
+  .brand{ margin-right:0; }
+  .nav{ padding:8px 10px 8px 16px; }
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.wrap{ max-width:1200px; margin:0 auto; padding:0 24px; }
+.chapter{ padding:96px 0; }
+@media (max-width:720px){ .chapter{ padding:64px 0; } }
+
+/* ============================================================
+   HERO — full-bleed atmospheric, frosted overlay card
+   ============================================================ */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex; align-items:flex-end;
+  padding:24px;
+  overflow:hidden;
+}
+.hero-art{
+  position:absolute; inset:12px;
+  border-radius:var(--r-surface);
+  /* Boardwalk sunset photo, with a soft dark wash at bottom-left for card legibility */
+  background-image:
+    linear-gradient(to top right, rgba(10,12,20,0.62) 0%, rgba(10,12,20,0.18) 55%, rgba(10,12,20,0.05) 100%),
+    url('hero.jpg');
+  background-size:cover, cover;
+  background-position:center, center;
+  overflow:hidden;
+}
+.hero-art::after{ /* grain */
+  content:""; position:absolute; inset:0; opacity:0.14; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+.hero-card{
+  position:relative;
+  max-width:620px;
+  background:rgba(20,22,36,0.42);
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.16);
+  border-radius:var(--r-surface);
+  padding:48px;
+  color:#fff;
+}
+.hero-card .eyebrow{ color:rgba(255,255,255,0.72); }
+.hero-card h1{
+  color:#fff;
+  font-size:clamp(48px, 8vw, 84px);
+  line-height:1.02;
+  letter-spacing:-0.03em;
+  margin:0 0 20px 0;
+}
+.hero-card p.lead{
+  font-size:18px; line-height:1.5; color:rgba(255,255,255,0.86);
+  margin:0 0 32px 0; max-width:46ch;
+}
+.hero-actions{ display:flex; flex-wrap:wrap; gap:12px; }
+@media (max-width:720px){
+  .hero-art{ inset:8px; }
+  .hero-card{ padding:32px 24px; }
+}
+
+/* ============================================================
+   EDITORIAL SECTION HEAD
+   ============================================================ */
+.sec-head{ max-width:720px; margin-bottom:48px; }
+.sec-head h2{
+  font-size:clamp(36px, 5vw, 54px);
+  line-height:1.08; letter-spacing:-0.02em;
+  margin:0 0 16px 0;
+}
+.sec-head p{ font-size:18px; color:var(--ash); line-height:1.5; margin:0; max-width:52ch; }
+
+/* ============================================================
+   PHOTOGRAPHY GALLERY — media cards
+   ============================================================ */
+/* ---- Slideshow ---- */
+.slideshow{
+  position:relative;
+  border:1px solid var(--mist);
+  border-radius:var(--r-card-lg);
+  overflow:hidden;
+  background:var(--linen);
+  box-shadow:var(--sh-card);
+  aspect-ratio:16/9;
+}
+.slides{ position:absolute; inset:0; }
+.slide{
+  position:absolute; inset:0; margin:0;
+  opacity:0; transition:opacity .6s ease;
+  pointer-events:none;
+}
+.slide.is-active{ opacity:1; pointer-events:auto; }
+.slide img{ width:100%; height:100%; object-fit:cover; display:block; }
+.slide figcaption{
+  position:absolute; left:0; right:0; bottom:0;
+  padding:56px 24px 20px;
+  font-family:var(--sans); font-size:15px; font-weight:500; color:#fff;
+  background:linear-gradient(to top, rgba(10,12,20,0.7), rgba(10,12,20,0));
+}
+.nav-arrow{
+  position:absolute; top:50%; transform:translateY(-50%); z-index:3;
+  width:46px; height:46px; border-radius:50%;
+  background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.45);
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  color:#fff; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  transition:background-color .16s ease;
+}
+.nav-arrow:hover{ background:rgba(255,255,255,0.3); }
+.nav-arrow svg{ width:22px; height:22px; }
+.nav-arrow.prev{ left:16px; }
+.nav-arrow.next{ right:16px; }
+.counter{
+  position:absolute; top:16px; right:16px; z-index:3;
+  font-family:var(--sans); font-size:13px; font-weight:500; color:#fff;
+  background:rgba(10,12,20,0.4); border:1px solid rgba(255,255,255,0.2);
+  backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px);
+  padding:5px 11px; border-radius:50px;
+}
+.dots{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:20px; }
+.dot{
+  width:8px; height:8px; border-radius:50%; padding:0;
+  border:1px solid var(--fog); background:transparent; cursor:pointer;
+  transition:background-color .16s ease, border-color .16s ease, transform .16s ease;
+}
+.dot:hover{ border-color:var(--charcoal); }
+.dot.is-active{ background:var(--signal-blue); border-color:var(--signal-blue); transform:scale(1.25); }
+.gallery-foot{ margin-top:32px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+@media (max-width:720px){
+  .slideshow{ aspect-ratio:4/3; }
+  .nav-arrow{ width:40px; height:40px; }
+  .nav-arrow.prev{ left:10px; } .nav-arrow.next{ right:10px; }
+  .slide figcaption{ font-size:14px; padding:48px 16px 16px; }
+}
+
+/* ============================================================
+   PRINTS & WALLPAPERS — Payhip product cards
+   ============================================================ */
+.pcards{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.pcard{ display:flex; flex-direction:column; background:var(--paper); border:1px solid var(--mist); border-radius:var(--r-card-lg); overflow:hidden; box-shadow:var(--sh-card); text-decoration:none; transition:transform .18s ease; }
+.pcard:hover{ transform:translateY(-3px); }
+.pcard .pcover{ aspect-ratio:2/3; background:var(--linen); border-bottom:1px solid var(--mist); }
+.pcard .pcover img{ width:100%; height:100%; object-fit:cover; display:block; }
+.pcard .pbody{ padding:20px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.pcard .kicker{ font-size:13px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; color:var(--ash); }
+.pcard h3{ font-size:24px; line-height:1.2; letter-spacing:-0.01em; }
+.pcard p{ font-size:15px; color:var(--ash); margin:0; flex:1; }
+.pcard .pfoot{ display:flex; align-items:center; justify-content:space-between; margin-top:12px; gap:12px; }
+.pcard .price{ font-family:var(--serif); font-size:22px; color:var(--graphite); }
+.pcard .card-link{ font-size:15px; font-weight:500; color:var(--signal-blue); display:inline-flex; align-items:center; gap:6px; }
+@media (max-width:900px){ .pcards{ grid-template-columns:1fr; max-width:460px; } }
+
+/* ============================================================
+   WORLD SWAP — the single Cerulean atmospheric moment
+   ============================================================ */
+.feature{
+  position:relative;
+  display:block;
+  text-decoration:none;
+  border-radius:var(--r-surface);
+  background:var(--cerulean);
+  color:#fff;
+  overflow:hidden;
+  box-shadow:rgba(0,0,0,0.06) 0px 2px 2px 0px, rgba(0,0,0,0.04) 0px 0px 0px 5px;
+  transition:transform .18s ease;
+}
+.feature:hover{ transform:translateY(-2px); }
+.feature::before,.feature::after{ pointer-events:none; }
+.feature::before{ content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(80% 90% at 88% 10%, rgba(255,255,255,0.22), rgba(255,255,255,0) 55%),
+    radial-gradient(70% 80% at 6% 100%, rgba(0,40,70,0.4), rgba(0,40,70,0) 60%); }
+.feature::after{ content:""; position:absolute; inset:0; opacity:0.35; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.feature-inner{ position:relative; z-index:1; padding:80px; max-width:640px; }
+.feature .eyebrow{ color:rgba(255,255,255,0.8); }
+.feature h2{ color:#fff; font-size:clamp(40px,6vw,64px); line-height:1.03; letter-spacing:-0.02em; margin:0 0 20px 0; }
+.feature p{ font-size:18px; color:rgba(255,255,255,0.9); line-height:1.55; margin:0 0 32px 0; max-width:44ch; }
+@media (max-width:720px){ .feature-inner{ padding:40px 28px; } }
+
+/* ============================================================
+   SHOP — product cards
+   ============================================================ */
+.cards{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.card{
+  display:flex; flex-direction:column;
+  background:var(--paper);
+  border:1px solid var(--mist);
+  border-radius:var(--r-card-lg);
+  overflow:hidden;
+  box-shadow:var(--sh-card);
+  transition:transform .18s ease;
+}
+.card:hover{ transform:translateY(-3px); }
+.card .cover{ aspect-ratio:1692/2584; position:relative; background:var(--linen); }
+.card .cover img{ width:100%; height:100%; object-fit:cover; display:block; }
+.card .cover .wash::after{ content:""; position:absolute; inset:0; opacity:0.35; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.card .cover .wash{ position:absolute; inset:0; }
+.card .body{ padding:20px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.card .kicker{ font-size:13px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; color:var(--ash); }
+.card h3{ font-size:24px; line-height:1.2; letter-spacing:-0.01em; }
+.card p{ font-size:15px; color:var(--ash); margin:0; flex:1; }
+.card .card-link{ font-size:15px; font-weight:500; color:var(--signal-blue); display:inline-flex; align-items:center; gap:6px; }
+.card .card-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
+.card .price{ font-family:var(--serif); font-size:19px; color:var(--graphite); }
+.shop-foot{ margin-top:32px; }
+@media (max-width:1000px){ .cards{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .cards{ grid-template-columns:1fr; max-width:420px; } }
+
+/* ============================================================
+   THE FEED — social + video
+   ============================================================ */
+.feed{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:16px; }
+.social{
+  position:relative;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  border:1px solid var(--mist);
+  border-radius:var(--r-card-lg);
+  overflow:hidden;
+  min-height:280px;
+  padding:20px;
+  color:#fff;
+  box-shadow:var(--sh-card);
+  transition:transform .18s ease;
+}
+.social:hover{ transform:translateY(-3px); }
+.social .bg{ position:absolute; inset:0; z-index:0; }
+.social .bg::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.55) 100%); }
+.social .content{ position:relative; z-index:1; }
+.social .plat{ font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; opacity:0.85; }
+.social .handle{ font-family:var(--serif); font-size:26px; margin:4px 0 6px; letter-spacing:-0.01em; }
+.social .meta{ font-size:14px; opacity:0.82; display:inline-flex; align-items:center; gap:7px; }
+.social.tall{ grid-row:span 2; min-height:0; }
+.plat-badge{ position:absolute; top:20px; left:20px; z-index:1; width:44px; height:44px; border-radius:50%;
+  background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.4); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px);
+  display:flex; align-items:center; justify-content:center; color:#fff; }
+.plat-badge svg{ width:22px; height:22px; display:block; }
+/* platform tints */
+.bg-yt{ background:linear-gradient(150deg,#3a2140,#6b2436 55%,#c23b2e); }
+.bg-tt{ background:linear-gradient(150deg,#101418,#1c2b33 55%,#0a5a63); }
+.bg-ig{ background:linear-gradient(150deg,#3a2450,#8a2f6a 55%,#e08a3a); }
+.bg-fb{ background:linear-gradient(150deg,#1b2444,#25417a 60%,#3b6ec2); }
+@media (max-width:860px){
+  .feed{ grid-template-columns:1fr 1fr; }
+  .social.tall{ grid-row:auto; }
+}
+@media (max-width:520px){ .feed{ grid-template-columns:1fr; } }
+
+/* ============================================================
+   FOOTER — white band, editorial colophon
+   ============================================================ */
+.footer{ background:var(--paper); border-top:1px solid var(--mist); }
+.footer-inner{ padding:80px 0 40px; }
+.footer h2{ font-size:clamp(32px,5vw,54px); line-height:1.08; letter-spacing:-0.02em; max-width:16ch; margin:0 0 40px; }
+.footer-grid{ display:flex; flex-wrap:wrap; gap:48px 80px; align-items:flex-start; }
+.foot-col h4{ font-family:var(--sans); font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ash); margin:0 0 14px; }
+.foot-col a{ display:block; font-size:16px; color:var(--charcoal); padding:4px 0; transition:color .15s ease; }
+.foot-col a:hover{ color:var(--signal-blue); }
+.foot-cta{ margin-left:auto; }
+.colophon{ margin-top:64px; padding-top:24px; border-top:1px solid var(--mist); display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; align-items:center; }
+.colophon span{ font-size:13px; color:var(--fog); }
+@media (max-width:720px){ .foot-cta{ margin-left:0; } }
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Aller au contenu</a>
 
-<header class="nav">
-  <div class="wrap nav__in">
-    <a class="brand" href="/" aria-label="Top World Enterprises — accueil">
-      <img class="brand__mark" src="/assets/img/mark.png" alt="" width="160" height="165">
-      <span class="brand__text">
-        <span class="brand__name">Top World Enterprises</span>
-        <span class="brand__loc">Casablanca, Maroc</span>
-      </span>
+<!-- ========================= NAV ========================= -->
+<div class="nav-wrap">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="#top" aria-label="Story Mode Guy — home">
+      <img class="brand-logo" src="smg-logo.png" alt="Story Mode Guy logo">
+      <span class="brand-name">Story Mode Guy</span>
     </a>
-    <nav aria-label="Principal">
-      <ul class="nav__links">
-        <li><a href="/services/">Services</a></li>
-        <li><a href="/loi-11-aout-2026/">Loi du 11 août</a></li>
-        <li><a href="/contact/">Contact</a></li>
-      </ul>
-    </nav>
-    <a class="nav__lang" href="/en/">EN</a>
-    <a class="btn btn--primary" href="/contact/">Réserver 20 min</a>
+    <div class="nav-links">
+      <a href="#photography">Photography</a>
+      <a href="#prints">Prints</a>
+      <a href="#worldswap">World Swap</a>
+      <a href="#shop">Shop</a>
+      <a href="#feed">The Feed</a>
+    </div>
+    <a class="btn btn-primary nav-cta" href="https://payhip.com/storymodeguy" target="_blank" rel="noopener">Shop <span class="arrow">→</span></a>
+  </nav>
+</div>
+
+<!-- ========================= HERO ========================= -->
+<header class="hero" id="top">
+  <div class="hero-art" aria-hidden="true"></div>
+  <div class="hero-card">
+    <p class="eyebrow">Photography · Ebooks · Film</p>
+    <h1>Story Mode Guy</h1>
+    <p class="lead">Real life shot like a film, and whole worlds built from scratch. Photography, original ebooks, and short films from someone who treats everything like it has a plot.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#photography">See the photography <span class="arrow">→</span></a>
+      <a class="btn btn-onblue" href="https://www.topworldmedia.world" target="_blank" rel="noopener">Enter World Swap</a>
+    </div>
   </div>
 </header>
 
-<main id="main">
-
-  <section class="wrap hero">
-    <p class="eyebrow">Centre d'appels · Casablanca, Maroc</p>
-    <h1>Votre équipe francophone <em>à Casablanca.</em></h1>
-    <p class="lede">
-      Permanence téléphonique, service client, prise de rendez-vous. Des agents
-      qui parlent français toute la journée, sur le même horaire que vos bureaux,
-      pour une fraction du coût d'une embauche en interne.
-    </p>
-    <div class="btn-row">
-      <a class="btn btn--primary" href="/contact/">Réserver 20 min avec le directeur</a>
-      <a class="btn btn--ghost" href="/services/">Voir les services</a>
-    </div>
-
-    <!-- Signature: the two clocks. Real times, real gap, computed live. -->
-    <div class="clock">
-      <div class="clock__row">
-        <span class="clock__city"><span class="clock__dot clock__dot--live"></span>Casablanca — notre plateau</span>
-        <span class="clock__time" id="clock-casa">--:--:--</span>
-      </div>
-      <div class="clock__row">
-        <span class="clock__city"><span class="clock__dot"></span>Paris — vos clients</span>
-        <span class="clock__time" id="clock-paris">--:--:--</span>
-      </div>
-      <p class="clock__foot">
-        <b id="clock-gap">·</b>
-        <span>3 h de vol · français et arabe · anglais selon les profils</span>
-      </p>
-    </div>
-  </section>
-
-  <section class="alert band band--tight">
-    <div class="wrap alert__in">
-      <p class="alert__count"><span id="loi-count">·</span></p>
-      <div class="alert__body">
-        <p><strong>Le 11 août 2026, le démarchage téléphonique passe à l'opt-in.</strong>
-          <span id="loi-count-label">jours restants</span> avant que l'appel non consenti vers un particulier devienne illégal en France.</p>
-        <p>Vos appels sortants s'arrêtent. Vos appels entrants, eux, vont augmenter. <a href="/loi-11-aout-2026/">Ce que ça change pour vous →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
-      <p class="eyebrow">Ce que nous faisons</p>
-      <h2>Quatre façons de nous confier le téléphone.</h2>
-      <div class="grid grid--2" style="margin-top:44px">
-        <article class="card">
-          <span class="card__tag">Entrant</span>
-          <h3>Permanence téléphonique</h3>
-          <p>Accueil personnalisé, prise de messages, orientation des demandes, gestion des urgences. Personne ne tombe sur un répondeur.</p>
-        </article>
-        <article class="card">
-          <span class="card__tag">Entrant</span>
-          <h3>Service client</h3>
-          <p>Vos clients parlent à quelqu'un qui connaît votre offre, en français, en anglais ou en arabe. Voix, e-mail, chat.</p>
-        </article>
-        <article class="card">
-          <span class="card__tag">Sortant · consenti</span>
-          <h3>Prise de rendez-vous</h3>
-          <p>Nous remplissons l'agenda de vos commerciaux. Ils font ce qu'ils font le mieux : conclure.</p>
-        </article>
-        <article class="card">
-          <span class="card__tag">Sortant · consenti</span>
-          <h3>Télévente et qualification</h3>
-          <p>Traitement de vos fichiers opt-in et de vos leads entrants, avec traçabilité du consentement à chaque appel.</p>
-        </article>
-      </div>
-      <div class="btn-row" style="margin-top:32px">
-        <a class="btn btn--ghost" href="/services/">Détail des services et tarifs</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="band band--navy">
-    <div class="wrap director">
-      <div>
-        <p class="eyebrow eyebrow--pale">Le plateau</p>
-        <p class="pull">La structure est neuve. L'équipe ne l'est pas.</p>
-        <p class="lede">
-          Autant le dire franchement : Top World Enterprises est une jeune société.
-          Vous ne trouverez pas ici une liste de logos clients longue comme le bras,
-          et nous n'allons pas en inventer une.
-        </p>
-        <p class="lede">
-          Ce que vous trouverez : un directeur qui dirige un plateau d'appels à
-          Casablanca depuis 2020, une équipe expérimentée dans le métier, et de la
-          capacité disponible maintenant — pas dans six mois.
-        </p>
-        <p class="lede">
-          Vous ne serez pas le client n° 4 000. Vous serez l'un des premiers, et
-          ça se verra dans l'attention que vous recevrez.
-        </p>
-        <p class="sig">
-          <span class="sig__name">Davy Kossa Mbaya Malanda</span>
-          <span class="sig__role">Directeur · Top World Enterprises SARL AU · Casablanca</span>
-        </p>
-        <div class="btn-row" style="margin-top:28px">
-          <a class="btn btn--onnavy" href="/contact/">Parler à Kossa</a>
-        </div>
-      </div>
-      <ul class="facts">
-        <li>
-          <span class="facts__k">Direction</span>
-          <span>Davy Kossa Mbaya Malanda dirige un plateau d'appels à Casablanca depuis janvier 2020.</span>
-        </li>
-        <li>
-          <span class="facts__k">Société</span>
-          <!-- TODO Ian : ICE et RC réels. Pour une société jeune, c'est la preuve
-               la moins chère et la plus vérifiable qu'on existe vraiment. -->
-          <span>SARL AU de droit marocain, immatriculée à Casablanca. ICE et RC communiqués sur demande — vérifiez-nous.</span>
-        </li>
-        <li>
-          <span class="facts__k">Fuseau</span>
-          <span>GMT+1 toute l'année. Nos horaires sont vos horaires — pas un relais de nuit à l'autre bout du monde.</span>
-        </li>
-        <li>
-          <span class="facts__k">Langues</span>
-          <span>Français et arabe. Anglais selon les profils — dites-nous ce qu'il vous faut, nous recrutons pour votre besoin.</span>
-        </li>
-        <li>
-          <span class="facts__k">Données</span>
-          <span>Le Maroc ne bénéficie pas d'une décision d'adéquation de la Commission européenne. Tout transfert de données depuis l'UE doit donc être encadré par des clauses contractuelles types (CCT). Nous les signons avec chaque client, et nous sommes soumis à la loi marocaine 09-08.</span>
-        </li>
-        <li>
-          <span class="facts__k">Distance</span>
-          <span>3 heures de vol depuis Paris. Venez voir le plateau — pour une société jeune, c'est la meilleure preuve qu'on puisse vous donner.</span>
-        </li>
-        <li>
-          <span class="facts__k">Démarrage</span>
-          <span>Équipe formée et opérationnelle en 15 jours.</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="band band--mist">
-    <div class="wrap" style="text-align:center">
-      <p class="eyebrow">Prochaine étape</p>
-      <h2 style="max-width:20ch;margin-inline:auto">Vingt minutes suffisent pour savoir si ça vaut le coup.</h2>
-      <p class="lede" style="margin:22px auto 0">
-        Dites-nous ce que vous faites du téléphone aujourd'hui et combien ça vous coûte.
-        Nous vous dirons honnêtement si nous pouvons faire mieux.
-      </p>
-      <div class="btn-row" style="justify-content:center;margin-top:32px">
-        <a class="btn btn--primary" href="/contact/">Réserver un créneau</a>
-        <a class="btn btn--ghost" href="tel:+212529875900">+212 5 29 87 59 00</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="foot">
+<!-- ========================= CH.01 PHOTOGRAPHY ========================= -->
+<section class="chapter" id="photography">
   <div class="wrap">
-    <div class="foot__grid">
-      <div>
-        <a class="brand brand--foot" href="/">
-          <img class="brand__mark" src="/assets/img/mark-white.png" alt="" width="160" height="165">
-          <span class="brand__text">
-            <span class="brand__name">Top World Enterprises</span>
-            <span class="brand__loc">SARL AU · Casablanca, Maroc</span>
-          </span>
-        </a>
-        <address class="foot__mono">
-          Offices Latitudes<br>
-          Route de l'Oasis, Bureau 304<br>
-          Maârif, Casablanca — Maroc<br>
-          <a href="tel:+212529875900">+212 5 29 87 59 00</a><br>
-          <a href="mailto:kossa@topworldenterprises.com">kossa@topworldenterprises.com</a>
-        </address>
+    <div class="sec-head">
+      <p class="eyebrow">Chapter 01 — The Frames</p>
+      <h2>Photography</h2>
+      <p>A running record of light, place, and the small moments that turn a walk into a scene. Every frame is a still from a story that's still being written.</p>
+    </div>
+
+    <div class="slideshow" id="slideshow">
+      <div class="slides" id="slides">
+        <figure class="slide is-active"><img src="photo-01.jpg" alt="Red sky over the boardwalk"><figcaption>Red sky over the boardwalk</figcaption></figure>
+        <figure class="slide"><img src="photo-02.jpg" alt="Ferris wheel in silhouette" loading="lazy"><figcaption>Ferris wheel in silhouette</figcaption></figure>
+        <figure class="slide"><img src="photo-03.jpg" alt="Walton Lighthouse, burning sky" loading="lazy"><figcaption>Walton Lighthouse, burning sky</figcaption></figure>
+        <figure class="slide"><img src="photo-04.jpg" alt="Ember light on the shore" loading="lazy"><figcaption>Ember light on the shore</figcaption></figure>
+        <figure class="slide"><img src="photo-05.jpg" alt="The wheel, lit up after dark" loading="lazy"><figcaption>The wheel, lit up after dark</figcaption></figure>
+        <figure class="slide"><img src="photo-06.jpg" alt="Lenticular cloud over the cliff" loading="lazy"><figcaption>Lenticular cloud over the cliff</figcaption></figure>
+        <figure class="slide"><img src="photo-07.jpg" alt="Dusk on the wet sand" loading="lazy"><figcaption>Dusk on the wet sand</figcaption></figure>
+        <figure class="slide"><img src="photo-08.jpg" alt="Still water, mirrored lights" loading="lazy"><figcaption>Still water, mirrored lights</figcaption></figure>
+        <figure class="slide"><img src="photo-09.jpg" alt="Golden hour on the tideline" loading="lazy"><figcaption>Golden hour on the tideline</figcaption></figure>
+        <figure class="slide"><img src="photo-10.jpg" alt="Magenta over the coaster" loading="lazy"><figcaption>Magenta over the coaster</figcaption></figure>
+        <figure class="slide"><img src="photo-11.jpg" alt="Sun through the coaster" loading="lazy"><figcaption>Sun through the coaster</figcaption></figure>
+        <figure class="slide"><img src="photo-12.jpg" alt="Cotton candy sky" loading="lazy"><figcaption>Cotton candy sky</figcaption></figure>
+        <figure class="slide"><img src="photo-13.jpg" alt="Crimson over the bay" loading="lazy"><figcaption>Crimson over the bay</figcaption></figure>
+        <figure class="slide"><img src="photo-14.jpg" alt="Pastel evening on the river" loading="lazy"><figcaption>Pastel evening on the river</figcaption></figure>
+        <figure class="slide"><img src="photo-15.jpg" alt="Boardwalk after dark" loading="lazy"><figcaption>Boardwalk after dark</figcaption></figure>
+        <figure class="slide"><img src="photo-16.jpg" alt="Blue water on the rocks" loading="lazy"><figcaption>Blue water on the rocks</figcaption></figure>
+        <figure class="slide"><img src="photo-17.jpg" alt="Cirrus over an empty beach" loading="lazy"><figcaption>Cirrus over an empty beach</figcaption></figure>
+        <figure class="slide"><img src="photo-18.jpg" alt="Creek in the redwoods" loading="lazy"><figcaption>Creek in the redwoods</figcaption></figure>
+        <figure class="slide"><img src="photo-19.jpg" alt="Amanita on the forest floor" loading="lazy"><figcaption>Amanita on the forest floor</figcaption></figure>
+        <figure class="slide"><img src="photo-20.jpg" alt="Sea foam, Christmas morning" loading="lazy"><figcaption>Sea foam, Christmas morning</figcaption></figure>
       </div>
-      <div>
-        <h4>Services</h4>
-        <ul>
-          <li><a href="/services/">Permanence téléphonique</a></li>
-          <li><a href="/services/">Service client</a></li>
-          <li><a href="/services/">Prise de rendez-vous</a></li>
-          <li><a href="/services/">Télévente</a></li>
-        </ul>
+
+      <button class="nav-arrow prev" id="prevBtn" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button class="nav-arrow next" id="nextBtn" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+
+      <div class="counter"><span id="counterNow">1</span> / 20</div>
+    </div>
+
+    <div class="dots" id="dots" role="tablist" aria-label="Choose a photo"></div>
+
+    <div class="gallery-foot">
+      <a class="btn btn-primary" href="gallery.html">View the full gallery <span class="arrow">→</span></a>
+      <a class="btn btn-secondary" href="#prints">Prints &amp; wallpapers</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PRINTS & WALLPAPERS ========================= -->
+<section class="chapter" id="prints">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Santa Cruz Skies</p>
+      <h2>Take a piece of it home</h2>
+      <p>The photography, as instant digital downloads — wallpapers for your screens and high-resolution files you can print. Delivered to your inbox the moment you buy.</p>
+    </div>
+
+    <div class="pcards">
+      <a class="pcard" href="https://payhip.com/b/KstGk" target="_blank" rel="noopener">
+        <div class="pcover"><img src="thumb-phone.jpg" alt="Phone wallpaper pack preview"></div>
+        <div class="pbody">
+          <span class="kicker">Santa Cruz Skies</span>
+          <h3>Phone Wallpapers</h3>
+          <p>8 original photographs sized for phone lock and home screens. Fiery boardwalk sunsets, golden hour on the cliffs, and more.</p>
+          <div class="pfoot">
+            <span class="price">$4</span>
+            <span class="card-link">Get it on Payhip →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="pcard" href="https://payhip.com/b/9dl2k" target="_blank" rel="noopener">
+        <div class="pcover"><img src="thumb-desktop.jpg" alt="Desktop wallpaper pack preview"></div>
+        <div class="pbody">
+          <span class="kicker">Santa Cruz Skies</span>
+          <h3>Desktop Wallpapers · 4K</h3>
+          <p>12 photographs at 3840 × 2160 for desktop and laptop screens — a wallpaper for every mood, from fiery to calm.</p>
+          <div class="pfoot">
+            <span class="price">$4</span>
+            <span class="card-link">Get it on Payhip →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="pcard" href="https://payhip.com/b/8eEof" target="_blank" rel="noopener">
+        <div class="pcover"><img src="thumb-prints.jpg" alt="Printable fine-art set preview"></div>
+        <div class="pbody">
+          <span class="kicker">Coastline</span>
+          <h3>Printable Fine-Art Set</h3>
+          <p>6 high-resolution files (4000&nbsp;px) with a print-size guide. Print at home or any lab, and hang as many times as you like.</p>
+          <div class="pfoot">
+            <span class="price">$15</span>
+            <span class="card-link">Get it on Payhip →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="pcard" href="https://payhip.com/b/n20m8" target="_blank" rel="noopener">
+        <div class="pcover"><img src="thumb-first-light.jpg" alt="First Light sunrise wallpaper pack preview"></div>
+        <div class="pbody">
+          <span class="kicker">Santa Cruz Skies</span>
+          <h3>First Light · 4K</h3>
+          <p>6 photographs shot between 6:45 and 7:24am across five winter mornings — the half hour most people sleep through.</p>
+          <div class="pfoot">
+            <span class="price">$4</span>
+            <span class="card-link">Get it on Payhip →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="pcard" href="https://payhip.com/b/GOTV1" target="_blank" rel="noopener">
+        <div class="pcover"><img src="thumb-forest-floor.jpg" alt="Forest Floor printable fungi set preview"></div>
+        <div class="pbody">
+          <span class="kicker">Santa Cruz Mountains</span>
+          <h3>Forest Floor</h3>
+          <p>6 print-ready photographs from the forest floor after the December rains, including two impossible amanitas.</p>
+          <div class="pfoot">
+            <span class="price">$9</span>
+            <span class="card-link">Get it on Payhip →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="pcard" href="https://payhip.com/b/29Exc" target="_blank" rel="noopener">
+        <div class="pcover"><img src="thumb-clear-coast.jpg" alt="Clear Coast 4K wallpaper pack preview"></div>
+        <div class="pbody">
+          <span class="kicker">Santa Cruz Skies</span>
+          <h3>Clear Coast · 4K</h3>
+          <p>6 photographs from two clear winter days, when the storms scrub the air out and the bay goes hard blue to the far hills.</p>
+          <div class="pfoot">
+            <span class="price">$4</span>
+            <span class="card-link">Get it on Payhip →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= WORLD SWAP (FEATURED) ========================= -->
+<section class="chapter" id="worldswap">
+  <div class="wrap">
+    <a class="feature" href="https://www.topworldmedia.world" target="_blank" rel="noopener">
+      <div class="feature-inner">
+        <p class="eyebrow">Featured · Escrow marketplace</p>
+        <h2>World Swap</h2>
+        <p>A marketplace for buying goods and hiring people, paid in stablecoins. Every payment locks in escrow until you get exactly what you paid for — no bank, no chargebacks, open worldwide.</p>
+        <span class="btn btn-onblue">Enter World Swap <span class="arrow">→</span></span>
       </div>
-      <div>
-        <h4>Entreprise</h4>
-        <ul>
-          <li><a href="/loi-11-aout-2026/">Loi du 11 août 2026</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/en/">English</a></li>
-          <li><a href="https://www.linkedin.com/company/topworldenterprises">LinkedIn</a></li>
-        </ul>
+    </a>
+  </div>
+</section>
+
+<!-- ========================= CH.02 SHOP ========================= -->
+<section class="chapter" id="shop">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Chapter 02 — The Shop</p>
+      <h2>Emberwild</h2>
+      <p>An original illustrated series. Act I — The Burning runs four episodes so far, each a quick read delivered instantly as a PDF for just $0.99.</p>
+    </div>
+
+    <div class="cards">
+      <a class="card" href="https://payhip.com/b/bMoJ7" target="_blank" rel="noopener">
+        <div class="cover"><img src="ep-1cover.png" alt="Emberwild Episode One — The Bonding cover"></div>
+        <div class="body">
+          <span class="kicker">Episode One</span>
+          <h3>The Bonding</h3>
+          <p>To bond is to stop being alone. A young Vael makes a first bond with a flame-lynx — the world, its rituals, and a fragile peace.</p>
+          <div class="card-foot"><span class="price">$0.99</span><span class="card-link">Read on Payhip →</span></div>
+        </div>
+      </a>
+      <a class="card" href="https://payhip.com/b/hLtPf" target="_blank" rel="noopener">
+        <div class="cover"><img src="ep-2cover.png" alt="Emberwild Episode Two — Strangers in the Reeds cover"></div>
+        <div class="body">
+          <span class="kicker">Episode Two</span>
+          <h3>Strangers in the Reeds</h3>
+          <p>Not the last of their kind. Scattered by fire, the survivors cross unknown lands and learn they are not alone out here.</p>
+          <div class="card-foot"><span class="price">$0.99</span><span class="card-link">Read on Payhip →</span></div>
+        </div>
+      </a>
+      <a class="card" href="https://payhip.com/b/Lip5f" target="_blank" rel="noopener">
+        <div class="cover"><img src="ep-3cover.png" alt="Emberwild Episode Three — Old Wounds cover"></div>
+        <div class="body">
+          <span class="kicker">Episode Three</span>
+          <h3>Old Wounds</h3>
+          <p>A wound with two people holding it closed bleeds slower. Grief and ruins that shouldn't exist plant the first seed of the origin mystery.</p>
+          <div class="card-foot"><span class="price">$0.99</span><span class="card-link">Read on Payhip →</span></div>
+        </div>
+      </a>
+      <a class="card" href="https://payhip.com/b/9BG6W" target="_blank" rel="noopener">
+        <div class="cover"><img src="ep-4cover.png" alt="Emberwild Episode Four — The Sky Cage cover"></div>
+        <div class="body">
+          <span class="kicker">Episode Four</span>
+          <h3>The Sky Cage</h3>
+          <p>They don't say please. Something comes down out of the night sky with lights and a cage, and the wild stops being the thing to fear.</p>
+          <div class="card-foot"><span class="price">$0.99</span><span class="card-link">Read on Payhip →</span></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="shop-foot">
+      <a class="btn btn-filled" href="https://payhip.com/storymodeguy" target="_blank" rel="noopener">Browse everything on Payhip <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= CH.03 THE FEED ========================= -->
+<section class="chapter" id="feed">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Chapter 03 — The Feed</p>
+      <h2>Where the story continues</h2>
+      <p>New scenes daily. Follow along for the video side of the work across every platform.</p>
+    </div>
+
+    <div class="feed">
+      <a class="social tall" href="https://www.youtube.com/@Story-Mode-Guy" target="_blank" rel="noopener">
+        <div class="bg bg-yt" aria-hidden="true"></div>
+        <div class="plat-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 3.9 12 3.9 12 3.9s-7.5 0-9.4.5A3 3 0 0 0 .5 6.5 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.5 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.5zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></div>
+        <div class="content">
+          <span class="plat">YouTube · Video</span>
+          <div class="handle">@Story-Mode-Guy</div>
+          <span class="meta">Watch the films →</span>
+        </div>
+      </a>
+      <a class="social" href="https://www.tiktok.com/@storymodeguy" target="_blank" rel="noopener">
+        <div class="bg bg-tt" aria-hidden="true"></div>
+        <div class="plat-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.9 5.6a4.6 4.6 0 0 1-1.1-3H12.3v13.4a2.7 2.7 0 1 1-2.7-2.7c.28 0 .55.05.8.13V9.7a6.2 6.2 0 0 0-.8-.05 6.2 6.2 0 1 0 6.2 6.2V8.9a7.9 7.9 0 0 0 4.5 1.4V6.7a4.6 4.6 0 0 1-3.4-1.1z"/></svg></div>
+        <div class="content">
+          <span class="plat">TikTok · Video</span>
+          <div class="handle">@storymodeguy</div>
+          <span class="meta">Short films →</span>
+        </div>
+      </a>
+      <a class="social" href="https://www.instagram.com/storymodeguy" target="_blank" rel="noopener">
+        <div class="bg bg-ig" aria-hidden="true"></div>
+        <div class="plat-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></div>
+        <div class="content">
+          <span class="plat">Instagram</span>
+          <div class="handle">@storymodeguy</div>
+          <span class="meta">Frames &amp; reels →</span>
+        </div>
+      </a>
+      <a class="social" href="https://www.facebook.com/profile.php?id=61572467301840" target="_blank" rel="noopener">
+        <div class="bg bg-fb" aria-hidden="true"></div>
+        <div class="plat-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.6.23 2.6.23v2.9h-1.5c-1.5 0-1.9.9-1.9 1.9V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg></div>
+        <div class="content">
+          <span class="plat">Facebook</span>
+          <div class="handle">Story Mode Guy</div>
+          <span class="meta">Follow the page →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <h2>Everything's a story if you shoot it right.</h2>
+    <div class="footer-grid">
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#photography">Photography</a>
+        <a href="#worldswap">World Swap</a>
+        <a href="#shop">Shop</a>
+        <a href="#feed">The Feed</a>
+      </div>
+      <div class="foot-col">
+        <h4>Follow</h4>
+        <a href="https://www.youtube.com/@Story-Mode-Guy" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@storymodeguy" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/storymodeguy" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61572467301840" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <div class="foot-col">
+        <h4>Shop &amp; work</h4>
+        <a href="https://payhip.com/storymodeguy" target="_blank" rel="noopener">Payhip store</a>
+        <a href="#prints">Prints &amp; wallpapers</a>
+      </div>
+      <div class="foot-col foot-cta">
+        <a class="btn btn-filled" href="https://payhip.com/storymodeguy" target="_blank" rel="noopener">Visit the shop <span class="arrow">→</span></a>
       </div>
     </div>
-    <!-- TODO Ian : dès que tu as l'ICE et le RC, décommente la ligne ci-dessous.
-         Pour une société jeune vendant à des acheteurs français, un numéro
-         d'immatriculation vérifiable vaut plus que n'importe quel argument. -->
-    <!-- <p class="foot__mono" style="font-size:.78rem;color:#7A8FA8">ICE : 000000000000000 · RC : 000000 — Casablanca</p> -->
-    <div class="foot__legal">
-      <span>© 2026 Top World Enterprises SARL AU. Tous droits réservés.</span>
-      <span>Casablanca, Maroc</span>
+    <div class="colophon">
+      <span>© 2026 Story Mode Guy · storymodeguy.com</span>
+      <span>Photography · Ebooks · Film</span>
     </div>
   </div>
 </footer>
 
-<script src="/assets/js/site.js" defer></script>
-<script src="/assets/js/qualifier.js" defer></script>
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('#slides .slide'));
+  if(!slides.length) return;
+  var dotsWrap = document.getElementById('dots');
+  var counterNow = document.getElementById('counterNow');
+  var show = document.getElementById('slideshow');
+  var i = 0, timer = null, DELAY = 5000;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // build dots
+  slides.forEach(function(_, n){
+    var b = document.createElement('button');
+    b.className = 'dot' + (n === 0 ? ' is-active' : '');
+    b.setAttribute('aria-label', 'Photo ' + (n+1));
+    b.addEventListener('click', function(){ go(n); restart(); });
+    dotsWrap.appendChild(b);
+  });
+  var dots = Array.prototype.slice.call(dotsWrap.children);
+
+  function go(n){
+    slides[i].classList.remove('is-active');
+    dots[i].classList.remove('is-active');
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add('is-active');
+    dots[i].classList.add('is-active');
+    counterNow.textContent = i + 1;
+  }
+  function next(){ go(i+1); }
+  function prev(){ go(i-1); }
+  function start(){ if(!reduce) timer = setInterval(next, DELAY); }
+  function stop(){ clearInterval(timer); }
+  function restart(){ stop(); start(); }
+
+  document.getElementById('nextBtn').addEventListener('click', function(){ next(); restart(); });
+  document.getElementById('prevBtn').addEventListener('click', function(){ prev(); restart(); });
+
+  // pause on hover
+  show.addEventListener('mouseenter', stop);
+  show.addEventListener('mouseleave', start);
+
+  // keyboard
+  document.addEventListener('keydown', function(e){
+    var r = show.getBoundingClientRect();
+    if(r.bottom < 0 || r.top > window.innerHeight) return;
+    if(e.key === 'ArrowRight'){ next(); restart(); }
+    if(e.key === 'ArrowLeft'){ prev(); restart(); }
+  });
+
+  // swipe
+  var x0 = null;
+  show.addEventListener('touchstart', function(e){ x0 = e.changedTouches[0].clientX; stop(); }, {passive:true});
+  show.addEventListener('touchend', function(e){
+    if(x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if(Math.abs(dx) > 40){ dx < 0 ? next() : prev(); }
+    x0 = null; start();
+  }, {passive:true});
+
+  start();
+})();
+</script>
 </body>
 </html>
