@@ -62,9 +62,64 @@
     }
   }
 
+  /* Contact form → Web3Forms, submitted over fetch so the visitor never
+     leaves the page. Shows an inline success/error message either way. */
+  function wireContactForm() {
+    var form = document.querySelector(".form[action*='web3forms']");
+    if (!form) return;
+
+    var status = form.querySelector(".form__status");
+    var button = form.querySelector("button[type=submit]");
+    var keyField = form.querySelector("input[name=access_key]");
+
+    function show(kind, msg) {
+      if (!status) return;
+      status.textContent = msg;
+      status.className = "form__status form__status--" + kind;
+      status.hidden = false;
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      /* Guard: the access key hasn't been pasted in yet. Fail loudly here
+         rather than firing a doomed request that returns a cryptic error. */
+      if (!keyField || keyField.value.indexOf("YOUR_WEB3FORMS") === 0) {
+        show("err", "Le formulaire n'est pas encore configuré. Écrivez-nous directement à contact@topworldenterprises.com.");
+        return;
+      }
+
+      var original = button ? button.textContent : "";
+      if (button) { button.disabled = true; button.textContent = "Envoi…"; }
+      if (status) status.hidden = true;
+
+      fetch(form.action, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
+        .then(function (res) {
+          if (res.ok && res.data.success) {
+            form.reset();
+            show("ok", "Merci, votre message a bien été envoyé. Nous vous répondons sous un jour ouvré.");
+          } else {
+            show("err", "Désolé, l'envoi a échoué. Réessayez ou écrivez-nous à contact@topworldenterprises.com.");
+          }
+        })
+        .catch(function () {
+          show("err", "Problème de connexion. Réessayez ou écrivez-nous à contact@topworldenterprises.com.");
+        })
+        .finally(function () {
+          if (button) { button.disabled = false; button.textContent = original; }
+        });
+    });
+  }
+
   function start() {
     paintClocks();
     paintCountdown();
+    wireContactForm();
     setInterval(paintClocks, 1000);
   }
 

@@ -61,12 +61,18 @@
   <section class="band">
     <div class="wrap director">
       <div>
-        <!-- Action : remplacer YOUR_FORM_ID après création du formulaire sur
-             formspree.io avec contact@topworldenterprises.com. -->
-        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="hidden" name="_subject" value="Nouveau message — topworldenterprises.com">
-          <!-- Honeypot anti-spam : invisible pour l'humain, rempli par les robots. -->
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <form class="form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- ▼▼▼ À FAIRE : collez ici la clé d'accès Web3Forms. ▼▼▼
+               1. Allez sur https://web3forms.com — entrez contact@topworldenterprises.com
+               2. La clé arrive par e-mail (aucun compte à créer).
+               3. Remplacez YOUR_WEB3FORMS_ACCESS_KEY ci-dessous par cette clé.
+               Tant que c'est un placeholder, le formulaire affiche un message
+               d'erreur clair au lieu d'échouer en silence. ▲▲▲ -->
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="Nouveau message — topworldenterprises.com">
+          <input type="hidden" name="from_name" value="Formulaire topworldenterprises.com">
+          <!-- Honeypot anti-spam Web3Forms : invisible pour l'humain, coché par les robots. -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
 
           <div class="field">
             <label for="nom">Nom et prénom</label>
@@ -109,6 +115,7 @@
           <div class="btn-row">
             <button class="btn btn--primary" type="submit">Envoyer</button>
           </div>
+          <p class="form__status" role="status" aria-live="polite" hidden></p>
           <p class="hint">Réponse sous un jour ouvré. Vos coordonnées servent uniquement à vous répondre — nous ne les revendons pas.</p>
         </form>
       </div>

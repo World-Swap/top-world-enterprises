@@ -245,6 +245,12 @@ p { margin: 0 0 1em; }
 .field textarea { min-height: 120px; resize: vertical; }
 .hint { font-size: .85rem; color: var(--muted); margin: 0; }
 
+/* Contact-form submit feedback. Hidden until JS sets [data-state]. */
+.form__status { font-size: .92rem; line-height: 1.45; margin: 0; padding: 13px 14px; border-radius: 3px; border: 1.5px solid; }
+.form__status[hidden] { display: none; }
+.form__status--ok { background: #EAF6EC; border-color: #BEE1C6; color: #1C5E2C; }
+.form__status--err { background: #FBECEC; border-color: #F0C6C6; color: #8C2626; }
+
 /* ---------- footer ---------- */
 .foot { background: var(--navy-deep); color: #A9BACD; padding-block: clamp(48px, 6vw, 72px); font-size: .93rem; }
 .foot a { color: #DCE5EF; }
