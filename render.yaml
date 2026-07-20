@@ -34,7 +34,6 @@ services:
       - type: redirect
         source: /contactez-nous/contact-us
         destination: /contact/
-      # /mission had real content on the old site; the homepage absorbed it.
       - type: redirect
-        source: /mission
-        destination: /
+        source: /mission%2Fmission-objectives
+        destination: /mission/

@@ -13,15 +13,19 @@ almost unchanged.
 ## Structure
 
 ```
-/                       FR homepage
-/services/              FR services
-/loi-11-aout-2026/      FR — the opt-in law page (main SEO play)
-/contact/               FR contact + qualifying form
-/en/                    EN mirror — NOT BUILT YET
+/                       Accueil (home)
+/services/              Services de centre d'appels
+/mission/               Mission et objectifs (FR + EN)
+/contact/               Contact + formulaire
 /assets/css/site.css    all styling, design tokens at the top
-/assets/js/site.js      live clocks + law countdown
+/assets/js/site.js      live Casablanca / Paris clocks
 render.yaml             Render config, incl. redirects from old GoDaddy URLs
 ```
+
+Content mirrors the original GoDaddy site (Accueil · Services · Mission ·
+Contact), in the current white / blue / orange design that matches the logo.
+The design tokens live in `:root` at the top of `site.css` (`--navy` blue,
+`--amber` orange). No build step, no framework.
 
 ## Local preview
 
@@ -59,8 +63,8 @@ Domain stays registered at GoDaddy. We only repoint the records.
 7. Wait. Propagation is usually minutes, occasionally hours. Render issues the
    TLS certificate automatically once DNS resolves.
 
-**Do not delete the MX records.** They route `kossa@topworldenterprises.com`.
-Touching them breaks email. Only `@` and `www` change.
+**Do not delete the MX records.** They route the `@topworldenterprises.com`
+mailboxes. Touching them breaks email. Only `@` and `www` change.
 
 ### Rollback
 
@@ -73,11 +77,8 @@ about ten minutes.
 
 - [ ] **Formspree endpoint.** `contact/index.html` posts to
       `https://formspree.io/f/YOUR_FORM_ID`. Create the form at formspree.io
-      with `kossa@topworldenterprises.com` and paste the real ID. **The form does
+      with `contact@topworldenterprises.com` and paste the real ID. **The form does
       nothing until this is done.**
-- [ ] **Real pricing.** `services/index.html` has a TODO where the
-      "à partir de X €/poste/mois" line goes. A number filters tyre-kickers and
-      roughly doubles reply rate. It has to be defensible on call one.
 - [ ] **ICE + RC numbers.** Commented slot in every footer. TWE is a new company
       selling to French buyers who are actively screening for scams — a
       verifiable Moroccan registration number is the cheapest trust you can buy.
@@ -91,7 +92,6 @@ about ten minutes.
 
 ## After launch
 
-- [ ] `/en/` mirror (home, services, contact)
 - [ ] Google Search Console → submit `sitemap.xml`
 - [ ] Google Business Profile for the Maârif office
 - [ ] Proof: client logos, one named case study, headcount, years operating.
