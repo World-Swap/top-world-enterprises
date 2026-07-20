@@ -62,13 +62,11 @@
     <div class="wrap director">
       <div>
         <form class="form" action="https://api.web3forms.com/submit" method="POST">
-          <!-- ▼▼▼ À FAIRE : collez ici la clé d'accès Web3Forms. ▼▼▼
-               1. Allez sur https://web3forms.com — entrez contact@topworldenterprises.com
-               2. La clé arrive par e-mail (aucun compte à créer).
-               3. Remplacez YOUR_WEB3FORMS_ACCESS_KEY ci-dessous par cette clé.
-               Tant que c'est un placeholder, le formulaire affiche un message
-               d'erreur clair au lieu d'échouer en silence. ▲▲▲ -->
-          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <!-- Clé d'accès Web3Forms. Publique par nature : elle ne fait que
+               router les messages vers l'e-mail configuré sur web3forms.com.
+               Gérer le destinataire / la clé : https://web3forms.com (compte
+               orionsun83@gmail.com). -->
+          <input type="hidden" name="access_key" value="f6658229-9b65-4654-88b4-ee73329dd031">
           <input type="hidden" name="subject" value="Nouveau message — topworldenterprises.com">
           <input type="hidden" name="from_name" value="Formulaire topworldenterprises.com">
           <!-- Honeypot anti-spam Web3Forms : invisible pour l'humain, coché par les robots. -->
